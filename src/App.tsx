@@ -98,7 +98,6 @@ function App() {
                                 onShowAuth={handleShowAuth}
                             />
                         </div>
-                        <Footer onAboutClick={() => setShowAbout(true)} />
                     </motion.div>
                 )}
             </AnimatePresence>
