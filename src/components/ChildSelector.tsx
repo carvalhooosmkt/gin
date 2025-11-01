@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Heart, LogOut, Sparkles, Crown, Zap, MessageCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Child } from '../types';
-import { useAuth } from '../hooks/useAuth';
 import PremiumUpsellModal from './PremiumUpsellModal';
 
 interface ChildSelectorProps {
@@ -24,7 +23,6 @@ const ChildSelector: React.FC<ChildSelectorProps> = ({
   loadingUser = false
 }) => {
   const { t, i18n } = useTranslation();
-  const { getUserId } = useAuth();
   const [showPremiumUpsell, setShowPremiumUpsell] = useState(false);
 
   const getChildGradient = (gender: 'male' | 'female') =>
