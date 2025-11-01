@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Heart, Clock, Crown, X, Zap, Star, Infinity, MessageCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { useAuth } from '../hooks/useAuth';
 
 interface LimitModalProps {
   isOpen: boolean;
@@ -13,7 +12,6 @@ interface LimitModalProps {
 
 const LimitModal: React.FC<LimitModalProps> = ({ isOpen, onClose, childName, childGender }) => {
   const { t, i18n } = useTranslation();
-  const { getUserId, user } = useAuth();
 
   const colorScheme = childGender === 'female' ? 'pink' : 'blue';
   const gradientClass =
