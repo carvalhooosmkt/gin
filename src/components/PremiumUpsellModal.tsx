@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Crown, Star, Heart, Zap, Shield, MessageCircle, Baby, Sparkles, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { useAuth } from '../hooks/useAuth';
 
 interface PremiumUpsellModalProps {
   isOpen: boolean;
@@ -12,7 +11,6 @@ interface PremiumUpsellModalProps {
 
 const PremiumUpsellModal: React.FC<PremiumUpsellModalProps> = ({ isOpen, onClose, user }) => {
   const { t, i18n } = useTranslation();
-  const { getUserId } = useAuth();
 
   useEffect(() => {
     if (isOpen) document.body.style.overflow = 'hidden';
